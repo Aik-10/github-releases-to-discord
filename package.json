@@ -1,0 +1,23 @@
+{
+  "name": "github-releases-to-discord",
+  "version": "1.0.0",
+  "description": "Sending custom Discord webhook message, when Github releases created.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "github",
+    "release",
+    "action"
+  ],
+  "author": "Lentokone <44865524+Aik-10@users.noreply.github.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "node-fetch": "^3.3.2"
+  }
+}
