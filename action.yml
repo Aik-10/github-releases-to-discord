@@ -18,7 +18,7 @@ inputs:
   footer_timestamp:
     description: Timestamp for the footer.
     required: false
-  overrideURL:
+  override_url:
     description: Hiding github repository address.
     required: false
 runs:
@@ -26,4 +26,4 @@ runs:
   main: 'dist/index.js'
 branding:
   icon: file-text
-  color: blue
+  color: blue 
