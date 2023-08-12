@@ -16900,11 +16900,11 @@ async function action() {
 
     if (footerTimestamp == 'true' || footerTimestamp === 'yes') embedMessageBody.timestamp = new Date().toISOString();
 
-    fetch(`${webhookUrl}?wait=true`, {
+    fetch(`${webhook}?wait=true`, {
         method: 'post',
         body: JSON.stringify(
             {
-                embeds: [embedMsg],
+                embeds: [embedMessageBody],
                 username: displayName ?? undefined,
                 avatar_url: avatarUrl ?? undefined,
             }
