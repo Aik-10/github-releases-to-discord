@@ -1,5 +1,7 @@
 import core from '@actions/core';
 import github from '@actions/github';
+import fetch from 'node-fetch'
+
 
 const formatPayloadDescription = (body) => {
     return body
@@ -66,11 +68,10 @@ async function action() {
             }
         ),
         headers: { 'Content-Type': 'application/json' }
-    })
-        .then(res => res.json())
-        .then(data => core.info(JSON.stringify(data)))
-        .catch(err => core.info(err))
+    }).then(res => res.json())
+    .then(data => core.info(JSON.stringify(data)))
+    .catch(err => core.info(err))
 }
 
-run().then(() => { core.info('Discord Action completed successfully') })
+action().then(() => { core.info('Discord Action completed successfully') })
     .catch(err => { core.setFailed(err.message) })
