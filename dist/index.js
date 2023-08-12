@@ -16887,7 +16887,7 @@ async function action() {
         return core.setFailed(`Invalid variable "webhook_url". Please set it.`)
     }
 
-    const { body, name, html_url } = await getPayloadContext(body);
+    const { body, name, html_url } = await getPayloadContext();
     const description = formatPayloadDescription(body);
 
     let embedMessageBody = {
