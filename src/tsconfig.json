@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "types": ["@actions/core", "@actions/github", "@types/node"]
+  },
+  "include": ["**/*"],
+  "exclude": ["**/*.spec.ts", "../node_modules", "**/*.test.ts"],
+}

@@ -1,5 +1,5 @@
 name: Release notes to Discord
-author: Aik-10 
+author: Aik-10
 description: Custom Discord release notes.
 inputs:
   webhook_url:
@@ -8,7 +8,7 @@ inputs:
   color:
     description: Embed message color.
     required: false
-    default: '2105893'
+    default: "2105893"
   username:
     description: String username.
     required: false
@@ -21,9 +21,15 @@ inputs:
   override_url:
     description: Hiding github repository address.
     required: false
+  replace_change:
+    description: String to replace what chagnes.
+    required: false
+  replace_contributors:
+    description: String to replace new contributors.
+    required: false
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: "node16"
+  main: "dist/index.js"
 branding:
   icon: file-text
-  color: blue 
+  color: blue
