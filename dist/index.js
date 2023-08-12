@@ -16858,6 +16858,8 @@ const formatPayloadDescription = (body) => {
         })
         .replace(/\n\s*\n/g, '\n')
         .replace(/\ in https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/\d+/g, '')
+        .replace(/What's Changed/g, 'Muutokset')
+        .replace(/New Contributors/g, 'Uudet tekijät')
 }
 
 async function getPayloadContext() {
