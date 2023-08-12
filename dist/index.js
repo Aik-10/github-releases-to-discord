@@ -16857,6 +16857,7 @@ const formatPayloadDescription = (body) => {
             return `**${newString}**`
         })
         .replace(/\n\s*\n/g, '\n')
+        .replace(/\ in https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/\d+/g, '')
 }
 
 async function getPayloadContext() {
