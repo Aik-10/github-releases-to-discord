@@ -16844,10 +16844,10 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
 
 
 
-
 const formatPayloadDescription = (body) => {
     return body
         .replace(/<!-- Release notes generated using configuration in \.github\/release\.yml at .* -->/g, "")
+        .replace(/\*\*Full Changelog\*\*: https:\/\/github\.com\/[^\/]+\/[^\/]+\/commits\/[^ ]+/g, "")
         .replace(/### (.*?)\n/g, function (substring) {
             const newString = substring.slice(4).replace(/(\r\n|\n|\r)/gm, "")
             return `**__${newString}__**`
@@ -16857,7 +16857,6 @@ const formatPayloadDescription = (body) => {
             return `**${newString}**`
         })
         .replace(/\n\s*\n/g, '\n')
-        .replace(/Full Changelog: https:\/\/github\.com\/[^\/]+\/[^\/]+\/commits\/[^ ]+/g, "")
 }
 
 async function getPayloadContext() {
