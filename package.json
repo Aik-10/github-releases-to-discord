@@ -5,8 +5,7 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc src/index.ts",
-    "package": "ncc build src/index.ts -m -o dist --license licenses.txt",
+    "build": "ncc build src/index.ts -m -o dist --license licenses.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
