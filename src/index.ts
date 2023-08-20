@@ -3,6 +3,8 @@ import core from "@actions/core";
 import github from '@actions/github';
 import { GetPayloadContent } from "./Actions/GetPayloadContent";
 import { HandlePayloadContentReplace } from "./Actions/HandlePayloadContentReplace";
+import { InvalidWebhookException } from './Exceptions/InvalidWebhookException';
+import { InvalidPayloadException } from './Exceptions/InvalidPayloadException';
 
 const action = async () => {
     const webhook = core.getInput('webhook_url');

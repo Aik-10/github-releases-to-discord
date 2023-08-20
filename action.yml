@@ -1,6 +1,7 @@
 name: Release notes to Discord
 author: Aik-10
 description: Custom Discord release notes.
+
 inputs:
   webhook_url:
     description: Discord's webhook url.
@@ -27,9 +28,12 @@ inputs:
   replace_contributors:
     description: String to replace new contributors.
     required: false
+
 runs:
   using: "node16"
   main: "dist/index.js"
+  post: 'dist/index.js'
+
 branding:
-  icon: file-text
+  icon: anchor
   color: blue
