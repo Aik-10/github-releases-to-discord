@@ -65,3 +65,12 @@ action().then(() => { core.info('Discord Action completed successfully') })
     .catch(err => { core.setFailed(err.message) })
 
 core.debug(`Waiting milliseconds 3 ...`)
+
+async function run() {
+    try {
+        core.debug(`Waiting milliseconds 10010 ...`)
+        core.debug(new Date().toTimeString())
+    } catch (error: any) {
+        core.setFailed(error.message)
+    }
+}
