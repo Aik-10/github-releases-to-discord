@@ -16,6 +16,7 @@ inputs:
   avatar_url:
     description: Discord profile URL.
     required: false
+    default: 'https://cdn.discordapp.com/avatars/228494142236393472/473d7bee802f362d48084b2dc762d527.png'
   footer_timestamp:
     description: Timestamp for the footer.
     required: false
@@ -30,7 +31,7 @@ inputs:
     required: false
 
 runs:
-  using: "node16"
+  using: "node20"
   main: "dist/index.js"
   post: 'dist/index.js'
 

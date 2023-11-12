@@ -1,12 +1,13 @@
 {
   "name": "github-releases-to-discord",
   "description": "Sending custom Discord webhook message, when Github releases created.",
-  "type": "module",
-  "main": "dist/index.js",
+  "private": true,
   "scripts": {
-    "lint": "eslint src/**/*.ts",
+    "bundle": "npm run lint && npm run build",
+    "lint": "eslint --ignore-path .eslintignore src/**/*.ts",
     "format": "eslint --fix src/**/*.ts",
-    "build": "ncc build src/index.ts -o dist --minify --license licenses.txt",
+    "build": "ncc build src/index.ts -o dist --license licenses.txt",
+    "watch": "npm run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

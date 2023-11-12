@@ -6,7 +6,12 @@ import { HandlePayloadContentReplace } from "./Actions/HandlePayloadContentRepla
 import { InvalidWebhookException } from './Exceptions/InvalidWebhookException';
 import { InvalidPayloadException } from './Exceptions/InvalidPayloadException';
 
-const action = async () => {
+core.debug(`Waiting milliseconds 1 ...`)
+
+const action = async(): Promise<void> => {
+    
+    core.debug(`Waiting in action 4 ...`)
+    
     const webhook = core.getInput('webhook_url');
     const embedColor = core.getInput('color') as Colors;
     const displayName = core.getInput('username');
@@ -49,8 +54,14 @@ const action = async () => {
     })
     .then(res => res.json())
     .then(data => core.info(JSON.stringify(data)))
+
+    core.setOutput('time', new Date().toTimeString())
 }
+
+core.debug(`Waiting milliseconds 2 ...`)
+core.debug(new Date().toTimeString())
 
 action().then(() => { core.info('Discord Action completed successfully') })
     .catch(err => { core.setFailed(err.message) })
 
+core.debug(`Waiting milliseconds 3 ...`)
